@@ -54,6 +54,7 @@ function Main() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
 
     if (newCidade === '' || newEstado === '') {
       toast.error('Preencha todos os campos obrigatórios.');
