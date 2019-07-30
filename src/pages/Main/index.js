@@ -58,6 +58,8 @@ function Main() {
 
     if (newCidade === '' || newEstado === '') {
       toast.error('Preencha todos os campos obrigatórios.');
+      setLoading(false);
+
       return;
     }
 
@@ -68,6 +70,8 @@ function Main() {
     if (responseCidade.data.length === 0) {
       toast.error('Esta Cidade ainda não está em nossa base de dados.');
       toast.error('Certifique-se de digitar corretamente.');
+      setLoading(false);
+
       return;
     }
 
