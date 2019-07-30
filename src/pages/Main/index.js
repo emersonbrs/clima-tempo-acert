@@ -59,7 +59,6 @@ function Main() {
     if (newCidade === '' || newEstado === '') {
       toast.error('Preencha todos os campos obrigatórios.');
       setLoading(false);
-
       return;
     }
 
@@ -71,7 +70,6 @@ function Main() {
       toast.error('Esta Cidade ainda não está em nossa base de dados.');
       toast.error('Certifique-se de digitar corretamente.');
       setLoading(false);
-
       return;
     }
 
@@ -114,7 +112,8 @@ function Main() {
         return current.text_icon.text.phrase.afternoon;
       }
 
-      if (data.getHours() > 17 || data.getHours() == 0) {
+      if (data.getHours() >= 17 || data.getHours() == 0) {
+        console.log(current);
         return current.text_icon.text.phrase.night;
       }
     }
@@ -140,7 +139,7 @@ function Main() {
         return current.text_icon.text.phrase.afternoon;
       }
 
-      if (data.getHours() > 17 || data.getHours() == 0) {
+      if (data.getHours() >= 17 || data.getHours() == 0) {
         return current.text_icon.text.phrase.night;
       }
     }
@@ -167,7 +166,7 @@ function Main() {
         return current.text_icon.text.phrase.afternoon;
       }
 
-      if (data.getHours() > 17 || data.getHours() == 0) {
+      if (data.getHours() >= 17 || data.getHours() == 0) {
         return current.text_icon.text.phrase.night;
       }
     }
@@ -190,7 +189,7 @@ function Main() {
         return current.text_icon.icon.afternoon;
       }
 
-      if (data.getHours() > 17 || data.getHours() == 0) {
+      if (data.getHours() >= 17 || data.getHours() == 0) {
         return current.text_icon.icon.night;
       }
     }
