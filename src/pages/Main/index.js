@@ -174,7 +174,7 @@ function Main() {
 
   const iconTempo = cidadesLista15Dias.reduce(function temp(prev, current) {
     const resultadoDia = current.date_br.split('/');
-    console.log(current);
+
     const data = new Date();
 
     if (resultadoDia[0] == data.getDate()) {
