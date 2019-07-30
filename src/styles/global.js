@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import 'react-toastify/dist/ReactToastify.css';
+
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -13,7 +15,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #145780;
+    background-image: linear-gradient(#145799, #148999);
     -webkit-font-smoothing: antialiased !important;
   }
 
