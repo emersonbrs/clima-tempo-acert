@@ -7,13 +7,10 @@ import api from '../../services/api';
 import { Container, Form, SubmitButton, List, Table } from './styles';
 import GlobalStyle from '../../styles/global';
 
-// import ListaClima from '../../components/ListaClima';
-
 function Main() {
   const [newCidade, setCidade] = useState('São Paulo');
   const [newEstado, setEstado] = useState('SP');
   const [tempoAgora, setTempoAgora] = useState([]);
-  const [diaDaSemana, setDiaDaSemana] = useState([]);
   const [cidadesListaId, setCidadesListaId] = useState([]);
   const [cidadesLista15Dias, setCidadesLista15Dias] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -333,7 +330,7 @@ function Main() {
     <>
       <Container>
         <div id="climaTempo">
-          <h1>Clima Tempo</h1>
+          <h1>Previsão do Tempo</h1>
         </div>
 
         <Form onSubmit={handleSubmit}>
